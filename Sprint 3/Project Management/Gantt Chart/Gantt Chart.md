@@ -1,0 +1,3 @@
+# Gantt Chart
+
+The production of the Gantt Chart is displayed below, utilizing the template from an OSS called Canva. The components that are implemented in each MVP of the minor project are known as the milestones (M). Each bar is represented by the duration for which the team worked on for each component before proceeding with the next step. The dependencies are depicted as Milestones(Tasks), Milestone M, and Tasks T under each bar.

@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Healthcare System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome {{ first_name }}</h1>
+      <br>
+      <h2>Your Appointments</h2>
+      {% if appointments == [] %}
+      <div>You have no appointments</div>
+      {% else %}
+      <ul>
+        {% for appointment in appointments%}
+          <li>
+            Dr. {{appointment[0].last_name}} on {{appointment[1]}}
+          </li>
+        {% endfor %}  
+      </ul>
+      {% endif %}
+      <form action="" method="post">
+        <input class="btn btn-default" type="submit" value="Make Appointment">
+      </form>
+    </div>
+  </body>
+</html>

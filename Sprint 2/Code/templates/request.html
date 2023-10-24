@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Healthcare System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome {{ first_name }}</h1>
+      <br>
+      <h2>Schedule an Appointment</h2>
+      <form action="" method="post">
+        <select name="apt_selected" id="apt_selected">
+          {% for apt_option in options %}
+            <option value={{apt_option[2]}}> Dr. {{apt_option[0].last_name}} (Specializes in {{apt_option[0].specialty}}) on {{apt_option[1]}}</option>
+          {% endfor %}
+        </select>
+        <input class="btn btn-default" type="submit" value="Make Appointment">
+     </form>
+    </div>
+  </body>
+</html>
